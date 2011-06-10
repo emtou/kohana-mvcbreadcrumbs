@@ -43,7 +43,7 @@ class Charougna_MVCBreadcrumbs
    *
    * @return string parent function name
    */
-  public static function extract_parent_function_name()
+  public function extract_parent_function_name()
   {
     try
     {
