@@ -39,6 +39,17 @@ interface Interface_MVCBreadcrumbs_Single
    */
   public function breadcrumb();
 
+
+  /**
+   * Configures the breadcrumbs used in the controller
+   *
+   * @param array $params extra parameters
+   *
+   * @return null
+   */
+  public function configure_breadcrumbs(array $params = array());
+
+
   /**
    * Initialises the breadcrumbs for a given action
    *
