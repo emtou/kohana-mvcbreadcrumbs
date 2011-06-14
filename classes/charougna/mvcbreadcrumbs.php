@@ -48,7 +48,12 @@ class Charougna_MVCBreadcrumbs
     try
     {
       $backtrace = debug_backtrace();
-      return $backtrace[2]['function'];
+
+      foreach ($backtrace as $level)
+      {
+        if (preg_match('/^action_/', $level['function']))
+          return $level['function'];
+      }
     }
     catch (Exception $exception)
     {
